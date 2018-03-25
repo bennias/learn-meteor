@@ -22,7 +22,7 @@ Meteor.startup(function () {
         let jsx = (
             <div>
                 <h1>{title}</h1>
-                <p>Hello {name}, It's nice to see you</p>
+                <p>Hello {name}, Nice to see you</p>
                 {renderPlayers(players)}
             </div>
         );
