@@ -5,14 +5,15 @@ import {Tracker} from 'meteor/tracker';
 
 import {Players} from './../imports/api/players';
 
-const renderPlayers = function (playersList) {
+const renderPlayers = (playersList) => {
 
-    return playersList.map(function (player) {
+    return playersList.map((player) => {
         return <p key={player._id}>{player.name} has {player.score} point(s).</p>
-    })
+    });
+
 };
 
-const handleSubmit = function (e) {
+const handleSubmit = (e) => {
     let playerName = e.target.playerName.value;
     let playerScore = e.target.playerScore.value;
     e.preventDefault();
@@ -23,13 +24,13 @@ const handleSubmit = function (e) {
         Players.insert({
             name: playerName,
             score: playerScore
-        })
+        });
     }
 };
 
-Meteor.startup(function () {
+Meteor.startup(() => {
 
-    Tracker.autorun(function () {
+    Tracker.autorun(() => {
         let players = Players.find().fetch();
 
         let name = 'Benni';
