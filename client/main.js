@@ -8,12 +8,18 @@ import {Players} from './../imports/api/players';
 const renderPlayers = (playersList) => {
 
     return playersList.map((player) => {
-        return <p key={player._id}>{player.name} has {player.score} point(s).</p>
+        return (
+            <p key={player._id}>
+                {player.name} has {player.score} point(s).
+                <button onClick={() => Players.remove({_id: player._id})}>
+                    Remove
+                </button>
+            </p>
+        );
     });
-
 };
 
-const handleSubmit = (e) => {
+const addPlayer = (e) => {
     let playerName = e.target.playerName.value;
     let playerScore = e.target.playerScore.value;
     e.preventDefault();
@@ -25,7 +31,7 @@ const handleSubmit = (e) => {
             name: playerName,
             score: playerScore
         });
-    }
+    };
 };
 
 Meteor.startup(() => {
@@ -39,9 +45,10 @@ Meteor.startup(() => {
             <div>
                 <h1>{title}</h1>
                 <p>Hello {name}, Nice to see you</p>
+                <hr/>
                 {renderPlayers(players)}
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={addPlayer}>
                     <input type="text" name="playerName" placeholder="Player Name"/>
                     <input type="number" name="playerScore" placeholder="Player Score"/>
                     <button>Add new Player</button>
