@@ -11,7 +11,13 @@ const renderPlayers = (playersList) => {
         return (
             <p key={player._id}>
                 {player.name} has {player.score} point(s).
-                <button onClick={() => Players.remove({_id: player._id})}>
+                <button onClick={() => Players.update(player._id, {$inc:{score: 1}})}>
+                    +
+                </button>
+                <button onClick={() => Players.update(player._id, {$inc:{score: -1}})}>
+                    -
+                </button>
+                <button onClick={() => Players.remove(player._id)}>
                     Remove
                 </button>
             </p>
@@ -21,12 +27,12 @@ const renderPlayers = (playersList) => {
 
 const addPlayer = (e) => {
     let playerName = e.target.playerName.value;
-    let playerScore = e.target.playerScore.value;
+    let playerScore = e.target.playerScore.valueAsNumber;
     e.preventDefault();
 
     if (playerName, playerScore){
         e.target.playerName.value = '';
-        e.target.playerScore.value = 0;
+        e.target.playerScore.valueAsNumber = 0;
         Players.insert({
             name: playerName,
             score: playerScore
