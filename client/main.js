@@ -34,13 +34,10 @@ Meteor.startup(() => {
   Tracker.autorun(() => {
     const players = Players.find().fetch();
 
-    const name = 'Benni';
     const title = 'Meteor App!';
     const jsx = (
       <div>
         <h1>{title}</h1>
-        <p>Hello {name}, Nice to see you</p>
-        <hr />
         {renderPlayers(players)}
 
         <form onSubmit={addPlayer}>
