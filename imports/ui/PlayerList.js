@@ -4,9 +4,14 @@ import PropTypes from 'prop-types';
 import Player from './../ui/Player';
 
 class PlayerList extends React.Component {
-  renderPlayers = playersList => playersList.map(player => <Player key={player._id} player={player} />);
+  renderPlayers() {
+    if (this.props.players.length === 0) {
+      return <p>Add a new Player</p>;
+    }
+    return this.props.players.map(player => <Player key={player._id} player={player} />);
+  }
   render() {
-    return this.renderPlayers(this.props.players);
+    return <div>{this.renderPlayers()}</div>;
   }
 }
 
