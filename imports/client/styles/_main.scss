@@ -1,0 +1,13 @@
+// Imports
+@import './components/variables';
+@import './components/reset';
+@import './components/titleBar';
+@import './components/playerList';
+@import './components/player';
+
+// wrapper
+
+.wrapper{
+    max-width: 66vw;
+    margin: 0 auto;
+}
