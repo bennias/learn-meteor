@@ -1,6 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import Player from './../ui/Player';
 
 class PlayerList extends React.Component {
@@ -11,7 +10,7 @@ class PlayerList extends React.Component {
     return this.props.players.map(player => <Player key={player._id} player={player} />);
   }
   render() {
-    return <div>{this.renderPlayers()}</div>;
+    return <div className="playerList">{this.renderPlayers()}</div>;
   }
 }
 

@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 class TitleBar extends React.Component {
   renderSubtitle() {
@@ -9,7 +9,7 @@ class TitleBar extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="titleBar">
         <h1>{this.props.title}</h1>
         {this.renderSubtitle()}
       </div>
