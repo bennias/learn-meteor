@@ -3,11 +3,26 @@
 @import './components/reset';
 @import './components/titleBar';
 @import './components/playerList';
-@import './components/player';
+@import './components/item';
+@import './components/buttons';
 
 // wrapper
 
 .wrapper{
-    max-width: 66vw;
+    max-width: 1136px;
     margin: 0 auto;
+}
+
+
+// form
+
+.form{
+    display: flex;
+    
+    &__input{
+        flex-grow: 1;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 2rem;
+    }
 }

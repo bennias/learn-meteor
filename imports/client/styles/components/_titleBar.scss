@@ -1,11 +1,26 @@
 .titleBar {
-    background: $lightDark;
-    color: white;
+    background: white;
+    color: $lightDark;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    margin-bottom: 4rem;
-    h1 {
-        font-weight: 400;
-        font-size: 3em;
+    margin-bottom: 5rem;
+    min-height: 40px;
+
+    &__title{
+        font-weight: 700;
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-right: 2rem;
     }
+
+    &__subtitle{
+        font-size: 2rem;
+        font-weight: 400;
+        color: $gitlabPurple;
+    }
+
 }

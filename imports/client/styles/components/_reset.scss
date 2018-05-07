@@ -9,10 +9,8 @@ html {
 }
 
 body {
+    background: $lightGrey;
     color: $lightDark;
     font-family: $fontFamily;
-
-    p {
-        font-size: 2em;
-    }
+    font-size: 2rem;
 }
