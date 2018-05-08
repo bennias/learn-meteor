@@ -17,10 +17,11 @@ class PlayerList extends React.Component {
   render() {
     return (
       <div className="playerList">
-        <FlipMove maintainContainerHeight={true} duration={300} easing="ease-out">
+        <FlipMove maintainContainerHeight duration={300} easing="ease-out">
           {this.renderPlayers()}
         </FlipMove>
-      </div>);
+      </div>
+    );
   }
 }
 

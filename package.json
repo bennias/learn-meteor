@@ -15,6 +15,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "meteor-node-stubs": "^0.3.2",
+    "numeral": "^2.0.6",
     "prettier": "^1.11.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
