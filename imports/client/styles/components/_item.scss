@@ -10,6 +10,18 @@
         min-width: 30rem;
     }
 
+    &--position{
+        &-1{
+            background: lighten(green, 70%)
+        }
+        &-2{
+            background: lighten(orange, 40%)
+        }
+        &-3{
+            background: lighten(red, 40%)
+        }
+    }    
+
     &__message{
         font-weight: 300;
         font-size: 2.5rem;
