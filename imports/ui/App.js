@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <TitleBar title={this.props.title} subtitle="- created by BAS" />
+        <TitleBar title={this.props.title} subtitle={this.props.subtitle} />
         <div className="wrapper">
           <PlayerList players={this.props.players} />
           <AddPlayer />
@@ -20,6 +20,7 @@ class App extends React.Component {
 
 App.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   players: PropTypes.array.isRequired,
 };
 
